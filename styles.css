@@ -680,7 +680,7 @@ nav a::after { background: var(--accent-secondary); }
   grid-template-areas:
     "media heading"
     "media interests";
-  grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.12fr);
+  grid-template-columns: minmax(240px, 0.62fr) minmax(0, 1.38fr);
   gap: 18px clamp(32px, 5vw, 70px);
   align-items: start;
 }
@@ -690,39 +690,22 @@ nav a::after { background: var(--accent-secondary); }
 
 .personal-media {
   grid-area: media;
-  display: grid;
-  gap: 14px;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .personal-photo {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
+  width: min(88%, 225px);
   margin: 0;
-  background: var(--mist);
   border: 1px solid var(--line);
 }
 
 .personal-photo img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.personal-photo-running img { object-position: 55% 66%; }
-.personal-photo-tennis img { object-position: 50% 62%; }
-
-.personal-photo figcaption {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  padding: 5px 9px;
-  color: var(--paper);
-  background: rgba(23, 62, 74, 0.86);
-  font-size: 0.78rem;
-  font-weight: 650;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  height: auto;
 }
 
 .interest-list {
@@ -788,7 +771,7 @@ footer a { color: var(--paper); }
   .hero { grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr); }
   .hero-copy { padding-left: 7vw; }
   .teaching-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
-  .personal-grid { grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr); gap: 18px 30px; }
+  .personal-grid { grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.38fr); gap: 18px 30px; }
 }
 
 @media (max-width: 760px) {
@@ -821,8 +804,7 @@ footer a { color: var(--paper); }
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .personal-media { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .personal-photo { aspect-ratio: 4 / 3; }
+  .personal-photo { width: min(56%, 220px); }
   .interest-list article { grid-template-columns: 28px 82px minmax(0, 1fr); gap: 10px; }
   .interest-list h3 { font-size: 1.25rem; }
   .contact { padding: 46px 24px; }
