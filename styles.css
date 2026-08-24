@@ -508,13 +508,19 @@ nav a::after { background: var(--accent-secondary); }
 .eyebrow {
   margin-bottom: 20px;
   color: var(--accent-secondary);
-  font-size: clamp(0.78rem, 1vw, 0.9rem);
+  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
   letter-spacing: 0.1em;
   text-transform: none;
   white-space: nowrap;
 }
-.hero h1 { margin-bottom: 16px; font-size: clamp(3.2rem, 4.2vw, 4.45rem); }
-.hero-meta { margin-bottom: 20px; border-left-color: var(--accent-secondary); }
+.hero h1 { margin-bottom: 16px; font-size: clamp(3.45rem, 4.4vw, 4.75rem); }
+.hero-meta {
+  margin-bottom: 20px;
+  border-left-color: var(--accent-secondary);
+  font-size: clamp(1rem, 1.2vw, 1.16rem);
+  line-height: 1.55;
+}
+.hero-meta p { white-space: nowrap; }
 
 .job-market-note {
   margin-top: 16px;
@@ -522,6 +528,7 @@ nav a::after { background: var(--accent-secondary); }
   color: #173e4a;
   background: var(--accent-soft);
   border-left-color: var(--accent-secondary);
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
 }
 
 .button { min-height: 46px; padding-inline: 20px; }
@@ -778,14 +785,21 @@ footer a { color: var(--paper); }
   .site-header { padding-inline: 20px; }
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding: 32px 24px 36px; }
-  .eyebrow { font-size: 0.625rem; letter-spacing: 0.02em; }
+  .eyebrow { font-size: clamp(0.65rem, 3.05vw, 0.86rem); letter-spacing: 0.01em; }
+  .hero-meta {
+    padding-left: 12px;
+    font-size: clamp(0.78rem, 3.5vw, 0.96rem);
+    letter-spacing: -0.025em;
+  }
   .hero-portrait-wrap { min-height: 285px; padding: 20px; }
   .portrait-frame { width: min(58%, 215px); }
   .job-market-note {
     width: 100%;
     margin-left: 0;
-    padding-inline: 10px;
-    white-space: normal;
+    padding-inline: 5px;
+    font-size: clamp(0.76rem, 3.4vw, 0.92rem);
+    letter-spacing: -0.03em;
+    white-space: nowrap;
   }
   .section { padding: 42px 24px; }
   .about-copy h2,
