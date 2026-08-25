@@ -599,7 +599,8 @@ nav a::after { background: var(--accent-secondary); }
 }
 
 .about-copy h2 { margin-bottom: 28px; }
-.about-grid { gap: 4vw; }
+.about-grid { display: block; max-width: 980px; }
+.about-main { display: grid; gap: 18px; }
 .about-grid a { color: var(--accent); border-bottom-color: var(--accent-secondary); }
 .about-grid .research-statement {
   color: var(--ink);
