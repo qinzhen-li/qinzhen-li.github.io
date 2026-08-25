@@ -606,6 +606,7 @@ nav a::after { background: var(--accent-secondary); }
   font-size: clamp(1.08rem, 1.25vw, 1.22rem);
   line-height: 1.5;
 }
+.about-grid .research-statement strong { color: var(--accent); font-weight: 600; }
 .topic-list { margin-top: 16px; }
 .topic-list span { border-color: var(--line); }
 
